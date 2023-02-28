@@ -1,0 +1,32 @@
+GIT: Cuenta con 3 estados Staged, Modified y Commited
+Git es mas eficiente con archivos planos que con archivos binarios(imagenes), debido a ue al minimo cambio debe volver a guardar 
+toda la informacion y eso ahce que se incremente el espacio en disco
+
+GITHUB: Es una plataforma de desarrollo  colavorativo para alojar proyectos. Principalmente es usado par guardar codigo fuente de programas de computadora.
+Es facil compartir proyectos.
+Permite que otras personas colaboren con un proyecto.
+
+
+$git init => Inicializa un repositorio dentro de la carpeta donde se lo ejecuta. Es la DB donde se guardan los cambios de los archivos.
+$git add archivo.txt => agregamos un archivo dentro de la DB creada comn git init
+  $git add . => Agrega todos los archivos de la carpeta
+
+$git rm archivo.txt => Quitamos los archivos agregados con el comando add antes de hacerle commit.
+
+$git commit -m 'descripcion del cambio' => Es el que envia los ultimos cambios del archivo a la DB de cambios
+
+$git status => Permite ver el estado de los archivos
+$git show => Todos los cambios historicos realizados quien, cuando
+
+$git log archivo.txt => Muestra toda la historia de un archivo
+  $git log --stat => Muestra cambios especificos apartir del commit
+ 
+$git push => Permite enviar todos los cambios a un repositorio remoto
+
+$git pull => Permite traer todos los archivos de un repositorio remoto hacia nuestra maquina local.
+ 
+$git checkout => Nos permite obtener los ultimos cambios de un proyecto, obtiene carpetas o solo archivos.
+
+$git reset => Permite volver a una version anterios
+  $git reset hard => Todo vuelve al estado anterior(Comando muy peligros per muy usado)
+  $git reset soft => Vuelve al estado anterior pero lo que esta en el stagin se mantiene en el stagin
