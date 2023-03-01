@@ -38,12 +38,22 @@ $git push => Permite enviar todos los cambios a un repositorio remoto
 
 $git pull => Permite traer todos los archivos de un repositorio remoto hacia nuestra maquina local.
  
- 
+GIT CHECKOUT => Nos permite volver a una version antrior 
 $git checkout => Nos permite obtener los ultimos cambios de un proyecto, obtiene carpetas o solo archivos.
+$git checkout c69434ef894424b65c774918c48256ccd488690b nombreArchivo => Nos permite regresar a la version antes de ese commit
+$git checkout master nobreArchivo => Obtenemos el archivo que estaba en la rama master
 
-$git reset => Permite volver a una version anterios
-  $git reset hard => Todo vuelve al estado anterior(Comando muy peligros per muy usado)
-  $git reset soft => Vuelve al estado anterior pero lo que esta en el stagin se mantiene en el stagin
+GIT RESET
+Este comando ayuda a volver en el tiempo sin la posibilidad de volver al futuro
+$git reset => Permite volver a una version anterior
+$git reset bbacef6b1bd2bb92eafc6bce835d73092bfc88ec --hard => Todo vuelve al estado anterior(Comando muy peligroso pero muy usado)
+$git reset --soft => Vuelve al estado anterior pero lo que esta en el staging se mantiene en el staging
+  
+GIT RM  
+$ git rm => Ayuda a eliminar archvios de GIT sin eliminar su historial del sistema de versiones.
+$ git rm --chached => Elimina archivos de nuestro repositorio local y staging area, pero los mantiene en el DDH. 
+                      Basicamente le dice a git que deje de trakear el historial de cambios
+$ git rm --force => Elimina los archivos de git y del DDH.
   
 QUE ES BRANCH?
 Rama MASTER v1 --> v2 --> v3 --> .............commit............ --> vf 
