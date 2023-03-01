@@ -6,19 +6,22 @@ GITHUB: Es una plataforma de desarrollo  colavorativo para alojar proyectos. Pri
 Es facil compartir proyectos.
 Permite que otras personas colaboren con un proyecto.
 
-COnfigurar usuarios antes de usar GIT
+Configurar usuarios antes de usar GIT
 $ git config --list => Muestra la configuración por defecto de GIT
 $ git config --global user.name "Nombre Dev" => Permite establecer el nombre del usuario
 $ git config --global user.email "email@dev.com" => Permite establecer el email del developer
 
-
+$git init => Crea un area que se llama STAGING
 $git init => Inicializa un repositorio dentro de la carpeta donde se lo ejecuta. Es la DB donde se guardan los cambios de los archivos.
+
+$git add => Agrega archivos al STAGING AREA
 $git add archivo.txt => agregamos un archivo dentro de la DB creada comn git init
   $git add . => Agrega todos los archivos de la carpeta
 
 $git rm archivo.txt => Quitamos los archivos agregados con el comando add antes de hacerle commit, esto no lo quita del cache.
 $ git rm --cached archivo.txt => Quita completamente el archivo de la memoria 
 
+$git commit => Envia los archivos al repositprio su nombre es MASTER o MAIN
 $git commit -m 'descripcion del cambio' => Es el que envia los ultimos cambios del archivo a la DB de cambios
 
 $git status => Permite ver el estado de los archivos
@@ -32,10 +35,27 @@ $git diff bbacef6b1bd2bb92eafc6bce835d73092bfc88ec e29cfb1feebcf64d46710b361e8d3
  
 $git push => Permite enviar todos los cambios a un repositorio remoto
 
+
 $git pull => Permite traer todos los archivos de un repositorio remoto hacia nuestra maquina local.
+ 
  
 $git checkout => Nos permite obtener los ultimos cambios de un proyecto, obtiene carpetas o solo archivos.
 
 $git reset => Permite volver a una version anterios
   $git reset hard => Todo vuelve al estado anterior(Comando muy peligros per muy usado)
   $git reset soft => Vuelve al estado anterior pero lo que esta en el stagin se mantiene en el stagin
+  
+QUE ES BRANCH?
+Rama MASTER v1 --> v2 --> v3 --> .............commit............ --> vf 
+Rama EXPERIMENTOS         v1 --> v2 --> 
+Rama BUGFIXING                                                       vf --> v(corregido) --> Master Vf.1
+
+Merge: Es la union de la version experimental o desarrollada con la version de la rama principal
+Hacer merge generan conflictos
+
+
+
+
+
+
+
