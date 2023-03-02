@@ -14,23 +14,48 @@ $ git config --global user.email "email@dev.com" => Permite establecer el email 
 $git init => Crea un area que se llama STAGING
 $git init => Inicializa un repositorio dentro de la carpeta donde se lo ejecuta. Es la DB donde se guardan los cambios de los archivos.
 
+GIT ADD
 $git add => Agrega archivos al STAGING AREA
 $git add archivo.txt => agregamos un archivo dentro de la DB creada comn git init
-  $git add . => Agrega todos los archivos de la carpeta
+$git add . => Agrega todos los archivos de la carpeta
+
 
 $git rm archivo.txt => Quitamos los archivos agregados con el comando add antes de hacerle commit, esto no lo quita del cache.
 $ git rm --cached archivo.txt => Quita completamente el archivo de la memoria 
 
+GIT COMMIT
 $git commit => Envia los archivos al repositprio su nombre es MASTER o MAIN
 $git commit -m 'descripcion del cambio' => Es el que envia los ultimos cambios del archivo a la DB de cambios
+$git commit -am => Hace el git add d los cambios de manera automatica. NOTA: solo funciona con archivos a los que se ha hecho git add previamente.
+
 
 $git status => Permite ver el estado de los archivos
 $git show archivo.txt => Todos los cambios historicos realizados quien, cuando
 
+GIT LOG
 $git log archivo.txt => Muestra toda la historia de un archivo
-  $git log --stat => Muestra cambios especificos apartir del commit
+$git log --stat => Muestra cambios especificos apartir del commit
+$git log --oneline => Este comando muestra el commit y su descripcion en una linea
+$git log --oneline => Te muestra el id commit y el título del commit.
+$git log --decorate => Te muestra donde se encuentra el head point en el log.
+$git log --stat => Explica el número de líneas que se cambiaron brevemente.
+$git log -p => Explica el número de líneas que se cambiaron y te muestra que se cambió en el contenido.
+$git shortlog => Indica que commits ha realizado un usuario, mostrando el usuario y el titulo de sus commits.
+$git log --graph --oneline --decorate y
+$git log --pretty=format:"%cn hizo un commit %h el dia %cd" - Muestra mensajes personalizados de los commits.
+$git log -3 - Limitamos el número de commits.
+$git log --after=“2018-1-2” ,
+$git log --after=“today” y
+$git log --after=“2018-1-2” --before=“today” - Commits para localizar por fechas.
+$git log --author=“Name Author” - Commits realizados por autor que cumplan exactamente con el nombre.
+$git log --grep=“INVIE” - Busca los commits que cumplan tal cual está escrito entre las comillas.
+$git log --grep=“INVIE” –i- Busca los commits que cumplan sin importar mayúsculas o minúsculas.
+$git log – index.html- Busca los commits en un archivo en específico.
+$git log -S “Por contenido”- Buscar los commits con el contenido dentro del archivo.
+$git log > log.txt - guardar los logs en un archivo txt
+
   
-  NOTA: Comparamos las versiones de los commits
+NOTA: Comparamos las versiones de los commits
 $git diff bbacef6b1bd2bb92eafc6bce835d73092bfc88ec e29cfb1feebcf64d46710b361e8d35a4ae26f8ac
  
 $git push => Permite enviar todos los cambios a un repositorio remoto
@@ -39,6 +64,7 @@ $git push => Permite enviar todos los cambios a un repositorio remoto
 $git pull => Permite traer todos los archivos de un repositorio remoto hacia nuestra maquina local.
  
 GIT CHECKOUT => Nos permite volver a una version antrior 
+$git checkout nombreRama => Nos permite cambiar de rama.
 $git checkout => Nos permite obtener los ultimos cambios de un proyecto, obtiene carpetas o solo archivos.
 $git checkout c69434ef894424b65c774918c48256ccd488690b nombreArchivo => Nos permite regresar a la version antes de ese commit
 $git checkout master nobreArchivo => Obtenemos el archivo que estaba en la rama master
@@ -54,14 +80,21 @@ $ git rm => Ayuda a eliminar archvios de GIT sin eliminar su historial del siste
 $ git rm --chached => Elimina archivos de nuestro repositorio local y staging area, pero los mantiene en el DDH. 
                       Basicamente le dice a git que deje de trakear el historial de cambios
 $ git rm --force => Elimina los archivos de git y del DDH.
+
   
 QUE ES BRANCH?
+$git branch ramaDeDesarrollo =>
 Rama MASTER v1 --> v2 --> v3 --> .............commit............ --> vf 
 Rama EXPERIMENTOS         v1 --> v2 --> 
 Rama BUGFIXING                                                       vf --> v(corregido) --> Master Vf.1
 
 Merge: Es la union de la version experimental o desarrollada con la version de la rama principal
 Hacer merge generan conflictos
+
+RAMAS:Son ambientes donde podemos ahcer cambios sin afectar la rama principal
+master => Rama principal, esta todo el historial de los commits, el commit mas reciente es la cabecera o HEAD
+ejm.
+cabecera => En esta rama se realizara especificamente la cabecera del programa
 
 
 
