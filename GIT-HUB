@@ -99,9 +99,28 @@ cabecera => En esta rama se realizara especificamente la cabecera del programa
 
 GIT-HUB
 
-
-
-
+CONECTAR REPOSITORIO DE GITHUB A REPOSITORIO LOCAL
+1.-Guardar la URL del repositorio de github con el nombre origin
+  git remote add origin URL
+2.-Verificar que la url se haya guardado correctamente
+  git remote -v
+3.-Traer la version del repositorio remoto y hacer merge para crear un commit con los archivos de ambas partes.
+Podemos usar 
+  git fetch y git merge 
+o solo 
+  git pull origin master --allow-underlated-histories
+4.-Para finalizar y guardar los cambios del repositorio local en github
+  git push origin master
+***************************************************
+COMO AUTENTICAR EN GITHUB 2022
+1.-Antes de comensar debemos renomabra la rama master a main, para ello nos situamos en la rama master o la rama que queremos renombrar
+  git branch -M main
+2.-Generar token de acceso personal
+    -Buscar settingd
+    -Click en developer settings
+    -Click en personal access tokens
+    -CLick en generate new token aqui se puede colocar un nombre, la fecha de expiración
+    -Tildar en repo y luego click en el bot
 
 
 
